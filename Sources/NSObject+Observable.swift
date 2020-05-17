@@ -34,4 +34,8 @@ extension NSObject {
         }
         return receipt
     }
+    
+    public func observeForUI<T>(for observable: Observable<T>, replay: Bool = true, with: @escaping (T) -> ()) -> BindingReceipt {
+        return observe(for: observable, replay: replay, forUI: true, with: with)
+    }
 }
