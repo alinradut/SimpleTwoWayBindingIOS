@@ -38,7 +38,8 @@ class SimpleTwoWayBindingExampleUITests: XCTestCase {
         let textInfo = app.staticTexts["textFieldInformation"]
         
         guard let originalValue = textField.value as? String else { return XCTFail() }
-        textField.tap()
+        let coordinate = textField.coordinate(withNormalizedOffset: .init(dx: 0.9, dy: 0.5))
+        coordinate.tap()
         textField.typeText("1234")
         var expectedCount = originalValue.count + 4
         var expectedTFValue = originalValue + "1234"
