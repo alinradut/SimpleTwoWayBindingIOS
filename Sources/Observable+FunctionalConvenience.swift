@@ -142,7 +142,7 @@ public extension Observable where ObservedType: Equatable {
 let ObserverZipThread = DispatchQueue(label: "RWGPS.Observer.Zipping")
 
 /// Given two observables, create a new observable that produces a tuple of the two observers' current values any time either emits a value
-public func zip<A, B>(_ a: Observable<A>, _ b: Observable<B>, replay: Bool = true) -> Observable<(A?, B?)> {
+public func zip<A, B>(replay: Bool = true, _ a: Observable<A>, _ b: Observable<B>) -> Observable<(A?, B?)> {
     let child = Observable<(A?, B?)>()
     let ra: BindingReceipt = a.bind { [weak child] a in
         ObserverZipThread.sync {
@@ -166,7 +166,7 @@ public func zip<A, B>(_ a: Observable<A>, _ b: Observable<B>, replay: Bool = tru
     return child
 }
 
-public func zip<A, B, C>(_ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>, replay: Bool = true) -> Observable<(A?, B?, C?)> {
+public func zip<A, B, C>(replay: Bool = true, _ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>) -> Observable<(A?, B?, C?)> {
     let child = Observable<(A?, B?, C?)>()
     let ra: BindingReceipt = a.bind { [weak child] a in
         ObserverZipThread.sync {
@@ -197,7 +197,7 @@ public func zip<A, B, C>(_ a: Observable<A>, _ b: Observable<B>, _ c: Observable
     return child
 }
 
-public func zip<A, B, C, D>(_ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>, _ d: Observable<D>, replay: Bool = true) -> Observable<(A?, B?, C?, D?)> {
+public func zip<A, B, C, D>(replay: Bool = true, _ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>, _ d: Observable<D>) -> Observable<(A?, B?, C?, D?)> {
     let child = Observable<(A?, B?, C?, D?)>()
     let ra: BindingReceipt = a.bind { [weak child] a in
         ObserverZipThread.sync {
@@ -235,7 +235,7 @@ public func zip<A, B, C, D>(_ a: Observable<A>, _ b: Observable<B>, _ c: Observa
     return child
 }
 
-public func zip<A, B, C, D, E>(_ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>, _ d: Observable<D>, _ e: Observable<E>, replay: Bool = true) -> Observable<(A?, B?, C?, D?, E?)> {
+public func zip<A, B, C, D, E>(replay: Bool = true, _ a: Observable<A>, _ b: Observable<B>, _ c: Observable<C>, _ d: Observable<D>, _ e: Observable<E>) -> Observable<(A?, B?, C?, D?, E?)> {
     let child = Observable<(A?, B?, C?, D?, E?)>()
     let ra: BindingReceipt = a.bind { [weak child] a in
         ObserverZipThread.sync {
