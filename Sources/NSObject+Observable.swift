@@ -12,7 +12,7 @@ extension NSObject {
     public func observe<T>(for observable: Observable<T>, replay: Bool = false, forUI: Bool = false, with: @escaping (T) -> ()) -> BindingReceipt {
         let receipt = observable.bind { observable, value  in
             if forUI {
-                DispatchQueue.main.async {
+                DispatchQueue.onMain {
                     with(value)
                 }
             }
@@ -23,7 +23,7 @@ extension NSObject {
         if replay {
             if let value = observable.value {
                 if forUI {
-                    DispatchQueue.main.async {
+                    DispatchQueue.onMain {
                         with(value)
                     }
                 }

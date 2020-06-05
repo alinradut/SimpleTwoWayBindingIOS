@@ -89,7 +89,7 @@ public class BindableTextView: UITextView, Bindable, UITextViewDelegate {
             self?.updateValue(with: value)
         }
         if let s = observable.value {
-            DispatchQueue.main.async { [weak self] in
+            DispatchQueue.onMain { [weak self] in
                 self?.updateValue(with: s)
             }
             

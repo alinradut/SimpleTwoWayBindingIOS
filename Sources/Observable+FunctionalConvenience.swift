@@ -36,12 +36,12 @@ public extension Observable {
     @discardableResult
     func bindUI(replay: Bool = true, _ f: @escaping (ObservedType) -> Void) -> BindingReceipt {
         let r: BindingReceipt = bind { _, value in
-            DispatchQueue.main.async {
+            DispatchQueue.onMain {
                 f(value)
             }
         }
         if replay, let value = value {
-            DispatchQueue.main.async {
+            DispatchQueue.onMain {
                 f(value)
             }
         }

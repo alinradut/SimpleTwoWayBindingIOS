@@ -430,8 +430,6 @@ class SimpleTwoWayBindingTests: XCTestCase {
         }
         
         a.value = "b"
-        DispatchQueue.main.async {
-            XCTAssert(bindFired, "Bind should have fired")
-        }
+        XCTAssert(bindFired, "Bind should have fired")
     }
 }
