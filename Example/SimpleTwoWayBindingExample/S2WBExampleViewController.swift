@@ -26,6 +26,7 @@ class S2WBExampleViewController: UITableViewController {
         case `switch`
         case textField
         case slider
+        case progressView
         case stepper
         case segment
         case textView
@@ -35,6 +36,7 @@ class S2WBExampleViewController: UITableViewController {
             case .switch: return SwitchCell.self
             case .textField: return TextFieldCell.self
             case .slider: return SliderCell.self
+            case .progressView: return ProgressViewCell.self
             case .stepper: return StepperCell.self
             case .segment: return SegmentedControlCell.self
             case .textView: return TextViewCell.self
@@ -46,6 +48,7 @@ class S2WBExampleViewController: UITableViewController {
             case .switch: return SwitchCell.reuseIdentifier
             case .textField: return TextFieldCell.reuseIdentifier
             case .slider: return SliderCell.reuseIdentifier
+            case .progressView: return ProgressViewCell.reuseIdentifier
             case .stepper: return StepperCell.reuseIdentifier
             case .segment: return SegmentedControlCell.reuseIdentifier
             case .textView: return TextViewCell.reuseIdentifier
@@ -57,6 +60,7 @@ class S2WBExampleViewController: UITableViewController {
             case .switch: return SwitchCell.cellHeight
             case .textField: return TextFieldCell.cellHeight
             case .slider: return SliderCell.cellHeight
+            case .progressView: return ProgressViewCell.cellHeight
             case .stepper: return StepperCell.cellHeight
             case .segment: return SegmentedControlCell.cellHeight
             case .textView: return TextViewCell.cellHeight
