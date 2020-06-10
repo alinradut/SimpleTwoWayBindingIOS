@@ -107,3 +107,11 @@ extension UILabel: Bindable {
     public func observingValue() -> String? { text }
     public func updateValue(with value: String) { text = value }
 }
+
+extension UIProgressView: Bindable {
+    public typealias BindingType = Float
+    
+    public func observingValue() -> Float? { return self.progress }
+    
+    public func updateValue(with value: Float) { self.progress = value }
+}
