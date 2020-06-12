@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3B753AEF80CF792BA699CE63 /* Pods_SimpleTwoWayBindingExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5370C553C014CC341CB254FF /* Pods_SimpleTwoWayBindingExampleTests.framework */; };
 		3B90A2B72490F4E10066C0E8 /* ProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B90A2B62490F4E10066C0E8 /* ProgressView.swift */; };
+		3BB975442493CA03001159B0 /* PageControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB975432493CA03001159B0 /* PageControl.swift */; };
 		9405A6892410704A00343089 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405A6882410704A00343089 /* AppDelegate.swift */; };
 		9405A68B2410704A00343089 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405A68A2410704A00343089 /* SceneDelegate.swift */; };
 		9405A68D2410704A00343089 /* S2WBExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9405A68C2410704A00343089 /* S2WBExampleViewController.swift */; };
@@ -47,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		3B90A2B62490F4E10066C0E8 /* ProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressView.swift; sourceTree = "<group>"; };
+		3BB975432493CA03001159B0 /* PageControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControl.swift; sourceTree = "<group>"; };
 		5370C553C014CC341CB254FF /* Pods_SimpleTwoWayBindingExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTwoWayBindingExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DA06A37976B0FC4B2988EFF /* Pods_SimpleTwoWayBindingExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleTwoWayBindingExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9405A6852410704A00343089 /* SimpleTwoWayBindingExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTwoWayBindingExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 				9405A6DF2417077000343089 /* Stepper.swift */,
 				9405A6E1241709C600343089 /* SegmentedControl.swift */,
 				9405A6E324170E5E00343089 /* TextView.swift */,
+				3BB975432493CA03001159B0 /* PageControl.swift */,
 			);
 			path = "Example Cells";
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 			files = (
 				9405A6DA2416FD5E00343089 /* S2WBExampleViewModel.swift in Sources */,
 				9405A6E2241709C600343089 /* SegmentedControl.swift in Sources */,
+				3BB975442493CA03001159B0 /* PageControl.swift in Sources */,
 				9405A68D2410704A00343089 /* S2WBExampleViewController.swift in Sources */,
 				9405A6D82416FD3D00343089 /* Switch.swift in Sources */,
 				9405A6E02417077000343089 /* Stepper.swift in Sources */,

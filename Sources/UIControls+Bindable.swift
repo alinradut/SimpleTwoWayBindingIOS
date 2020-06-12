@@ -115,3 +115,15 @@ extension UIProgressView: Bindable {
     
     public func updateValue(with value: Float) { self.progress = value }
 }
+
+extension UIPageControl : Bindable {
+    public typealias BindingType = Int
+    
+    public func observingValue() -> Int? {
+        return self.currentPage
+    }
+    
+    public func updateValue(with value: Int) {
+        self.currentPage = value
+    }
+}

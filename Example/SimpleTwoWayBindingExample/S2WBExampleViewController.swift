@@ -29,6 +29,7 @@ class S2WBExampleViewController: UITableViewController {
         case progressView
         case stepper
         case segment
+        case pageControl
         case textView
         
         var associatedClass: AnyClass {
@@ -39,6 +40,7 @@ class S2WBExampleViewController: UITableViewController {
             case .progressView: return ProgressViewCell.self
             case .stepper: return StepperCell.self
             case .segment: return SegmentedControlCell.self
+            case .pageControl: return PageControlCell.self
             case .textView: return TextViewCell.self
             }
         }
@@ -51,6 +53,7 @@ class S2WBExampleViewController: UITableViewController {
             case .progressView: return ProgressViewCell.reuseIdentifier
             case .stepper: return StepperCell.reuseIdentifier
             case .segment: return SegmentedControlCell.reuseIdentifier
+            case .pageControl: return PageControlCell.reuseIdentifier
             case .textView: return TextViewCell.reuseIdentifier
             }
         }
@@ -63,6 +66,7 @@ class S2WBExampleViewController: UITableViewController {
             case .progressView: return ProgressViewCell.cellHeight
             case .stepper: return StepperCell.cellHeight
             case .segment: return SegmentedControlCell.cellHeight
+            case .pageControl: return PageControlCell.cellHeight
             case .textView: return TextViewCell.cellHeight
             }
         }

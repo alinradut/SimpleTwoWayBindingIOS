@@ -31,6 +31,9 @@ struct S2WBExampleViewModel {
     let selectedSegment: Observable<Int> = Observable()
     let segmentDescription: Observable<String>
     
+    let pageControlIndex: Observable<Int> = Observable()
+    let pageControlDescription: Observable<String>
+
     // Text View items
     let textViewContents: Observable<String>
     
@@ -55,6 +58,9 @@ struct S2WBExampleViewModel {
         segmentDescription = selectedSegment
             .map { ["Sunny", "Partly Cloudy", "Cloudy", "Rain", "Thunderstorms"][$0] }
             .map { "The forecast is: \($0)" }
+        
+        pageControlDescription = pageControlIndex
+            .map { "Selected page is: \($0)" }
         
         textViewContents = zip(turnOn, sliderPosition, stepperPosition)
             .map {
