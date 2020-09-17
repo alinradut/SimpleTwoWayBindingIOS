@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension DispatchQueue {
+public extension DispatchQueue {
     
     /// Automatically sets and returns the associated DispatchSpecificKey
     /// that was attached to the main queue.
