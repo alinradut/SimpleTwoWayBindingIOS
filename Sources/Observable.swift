@@ -12,6 +12,8 @@ public class ReceiptBag {
     
     func pause() { receipts.forEach { $0.pauseObservations() } }
     func unpause() { receipts.forEach { $0.unpauseObservations() } }
+    
+    public init() {}
 }
 
 public struct BindingReceipt: Hashable, Identifiable {
